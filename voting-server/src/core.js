@@ -25,6 +25,7 @@ function getWinners(vote) {
 }
 
 export function next(state) {
+  // console.log("state currently is : ", state.get('entries'));
   const entries = state.get('entries')
                        .concat(getWinners(state.get('vote')));
   if (entries.size === 1) {
